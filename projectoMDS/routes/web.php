@@ -27,6 +27,10 @@ Route::get('/Utente', function () {
     return view('utente');
 });
 
+Route::get('/denuncia', function () {
+    return view('denuncia');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -17,32 +17,35 @@
           You are logged in!
 
 
-          <div class="alert alert-failure">
-            <a href="">Bem-vindo <?php echo Auth::user()->name; ?> </a>
-            <br>
+          <a href="">Bem-vindo <?php echo Auth::user()->name; ?> </a>
+          <br>
+          <br>
 
-            @if(Auth::user()->role == 'admin')
-            <a href="">Aprovar Denuncias</a>
-            @endif
-            <br>
+          @if(Auth::user()->role == 'admin')
+          <a href="">Aprovar Denuncias</a>
+          <br>
 
-            @if(Auth::user()->role == 'ps')
-            <a href="">Rever Denuncias</a>
-            @endif
-            <br>
+          <a href="">Rever Denuncias</a>
+          @endif
+          <br>
 
-            @if(Auth::user()->role == 'utente')
-            <a href="">Criar Denuncia</a>
-            @endif
-            <br>
+          @if(Auth::user()->role == 'ps')
+          <a href="">Rever Denuncias</a>
+          @endif
+          <br>
 
-          </div>
-
-
+          @if(Auth::user()->role == 'utente')
+          <a href="/denuncia">Criar Denuncia</a>
+          @endif
+          <br>
 
         </div>
+
+
+
       </div>
     </div>
   </div>
+</div>
 </div>
 @endsection
