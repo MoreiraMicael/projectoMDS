@@ -22,17 +22,17 @@
             <br>
 
             @if(Auth::user()->role == 'admin')
-            <a href="">Admin</a>
+            <a href="">Aprovar Denuncias</a>
             @endif
             <br>
 
             @if(Auth::user()->role == 'ps')
-            <a href="">Profissional de Saude</a>
+            <a href="">Rever Denuncias</a>
             @endif
             <br>
 
             @if(Auth::user()->role == 'utente')
-            <a href="">Utente</a>
+            <a href="">Criar Denuncia</a>
             @endif
             <br>
 
