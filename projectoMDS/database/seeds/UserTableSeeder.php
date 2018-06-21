@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\User;
 
 class UserTableSeeder extends Seeder
@@ -30,14 +31,12 @@ class UserTableSeeder extends Seeder
     $ps->password = bcrypt('ps');
     //$utente->role = 'ps';
     $ps->save();
-    //$ps->roles()->attach($role_ps);
 
     $admin = new User();
     $admin->name = 'Admin';
     $admin->email = 'admin@exemplo.com';
     $admin->password = bcrypt('admin');
-    //$utente->role = 'ps';
+    $utente->role = 'admin';
     $admin->save();
-    //$admin->roles()->attach($role_admin);
   }
 }

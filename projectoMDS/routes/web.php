@@ -34,3 +34,5 @@ Route::get('/denuncia', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/home', 'DenunciaController@store')->name('criarDenuncia');
